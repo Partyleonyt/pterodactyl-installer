@@ -19,9 +19,6 @@ Read more about [Pterodactyl](https://pterodactyl.io/) here. This script is not 
 - Panel: (optional) automatic configuration of firewall.
 - Uninstallation support for both panel and wings.
 
-## Help and support
-
-For help and support regarding the script itself and **not the official Pterodactyl project**, you can join the [Discord Chat](https://pterodactyl-installer.se/discord).
 
 ## Supported installations
 
@@ -36,6 +33,7 @@ List of supported installation setups for panel and Wings (installations support
 |                  | 18.04   | :red_circle: \*    | 8.1         |
 |                  | 20.04   | :white_check_mark: | 8.1         |
 |                  | 22.04   | :white_check_mark: | 8.1         |
+|                  | 23.04   | :white_check_mark: | 8.1         |
 |                  | 24.04   | :white_check_mark: | 8.1         |
 | Debian           | 8       | :red_circle: \*    |             |
 |                  | 9       | :red_circle: \*    |             |
@@ -57,7 +55,7 @@ _\* Indicates an operating system and release that previously was supported by t
 To use the installation scripts, simply run this command as root. The script will ask you whether you would like to install just the panel, just Wings or both.
 
 ```bash
-bash <(curl -s https://pterodactyl-installer.se)
+bash <(curl -s https://raw.githubusercontent.com/Partyleonyt/pterodactyl-installer/master/install.sh)
 ```
 
 _Note: On some systems, it's required to be already logged in as root before executing the one-line command (where `sudo` is in front of the command does not work)._
@@ -100,16 +98,13 @@ Replace name with one of the following (supported installations).
 
 Then you can use `vagrant ssh <name of machine>` to SSH into the box. The project directory will be mounted in `/vagrant` so you can quickly modify the script locally and then test the changes by running the script from `/vagrant/installers/panel.sh` and `/vagrant/installers/wings.sh` respectively.
 
-### Creating a release
-
-In `install.sh` github source and script release variables should change every release. Firstly, update the `CHANGELOG.md` so that the release date and release tag are both displayed. No changes should be made to the changelog points themselves. Secondly, update `GITHUB_SOURCE` and `SCRIPT_RELEASE` in `install.sh`. Finally, you can now push a commit with the message `Release vX.Y.Z`. Create a release on GitHub. See [this commit](https://github.com/pterodactyl-installer/pterodactyl-installer/commit/90aaae10785f1032fdf90b216a4a8d8ca64e6d44) for reference.
-
 ## Contributors ✨
 
 Copyright (C) 2018 - 2024, Vilhelm Prytz, <vilhelm@prytznet.se>, and contributors!
 
 - Created by [Vilhelm Prytz](https://github.com/vilhelmprytz)
 - Maintained by [Linux123123](https://github.com/Linux123123)
+- Changed by [Partyleon](https://github.com/Partyleonyt)
 
 Thanks to the Discord moderators [sam1370](https://github.com/sam1370), [Linux123123](https://github.com/Linux123123) and [sinjs](https://github.com/sinjs) for helping on the Discord server!
 contributors
